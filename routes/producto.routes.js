@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const productoController = require('../controllers/producto.controller');
-const { verificarToken, esAdmin, esModerador } = require('../middleware/authjwt');
+const { verificarToken, esAdmin, esModerador } = require('../middleware/authJwt');
 
 // Rutas protegidas
 router.get('/', verificarToken, productoController.obtenerProductos);
